@@ -1,0 +1,4 @@
+name: file_server_node
+namespace: biomind
+version: v1
+grpcPort: 0
