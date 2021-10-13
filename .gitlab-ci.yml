@@ -3,7 +3,7 @@ stages:
   - test
 #  - build
   - package
-#  - deploy
+  - deploy
 
 go-test:
   stage: test
@@ -52,3 +52,18 @@ build_image:
     - make tag=${CI_COMMIT_REF_NAME} docker
   only:
     - tags
+
+deploy_47.93.43.19:
+  stage: deploy
+  image: docker:20.10.8-alpine3.14
+  script:
+    - sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
+    - apk add --update make
+    - echo "使用 ${CI_COMMIT_REF_NAME} 镜像运行"
+    - make tag=${CI_COMMIT_REF_NAME} run
+  only:
+    - tags
+  tags:
+    - 47.93.43.19
+  when: manual
+  allow_failure: false
