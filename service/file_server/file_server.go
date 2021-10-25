@@ -14,8 +14,6 @@ import (
 	"path"
 	"time"
 
-	fs "smart.gitlab.biomind.com.cn/intelligent-system/biogo/file_server"
-
 	"smart.gitlab.biomind.com.cn/intelligent-system/biogo/redis"
 
 	"google.golang.org/grpc"
@@ -84,10 +82,6 @@ func (s *Service) SingleUpload(ctx context.Context, in *pb.UploadInfo) (ret *pb.
 		return
 	}
 
-	err = s.ReLoadStoreRate(ctx)
-	if err != nil {
-		return
-	}
 	return &pb.UpLoadResponse{
 		Message: "success",
 		Code:    0,
@@ -169,7 +163,6 @@ func (s *Service) DownloadNodeSelf(_ context.Context, in *pb.DownloadInfo) (resp
 }
 
 func (s *Service) BigFileDownload(in *pb.DownloadInfo, stream pb.FileServerService_BigFileDownloadServer) error {
-	fmt.Println(">>>", in.Exist)
 	if in.Exist {
 		return s.BigFileDownloadMyself(in, stream)
 	}
@@ -246,29 +239,6 @@ func (s *Service) SaveFileMetadata(ctx context.Context, eTag string, f *os.File,
 	}
 	key := fmt.Sprintf("%s/%s", in.Bucket, in.FileName)
 	return client.Set(ctx, key, string(body), 0).Err()
-}
-
-func (s *Service) ReLoadStoreRate(ctx context.Context) error {
-	size, err := fs.DirSizeB(path.Join(utils.GetCurrentAbPath(), model.RootDir))
-	if err != nil {
-		return err
-	}
-	node := &fs.ServerNode{
-		NodeName: config.GlobalConfig.Name,
-		Host:     config.GlobalConfig.IP,
-		Port:     config.GlobalConfig.GrpcPort,
-		DirSize:  size,
-	}
-
-	values, err := json.Marshal(node)
-	if err != nil {
-		return err
-	}
-	key := fmt.Sprintf("%s/%s",
-		model.FileServerNodePrefix,
-		config.GlobalConfig.Name,
-	)
-	return config.GetClient().Set(ctx, key, string(values))
 }
 
 func (s *Service) GetFileLocation(ctx context.Context, fileName, bucketName string) (*FileMetadata, error) {
