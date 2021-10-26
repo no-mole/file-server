@@ -18,6 +18,6 @@ mkdir -p /data/${NAME}/data:
 
 docker login  --username "${DOCKER_USER}" --password "${DOCKER_PASSWORD}" ${DOCKER_HUB}
 
-docker ps -a|grep ${NAME}|awk '{print $1}'|xargs -r docker rm -f
+docker rm -f ${NAME}
 
 docker run --name ${NAME} --network host -e MODE=test -v /data/${NAME}/data:/home/data -v /data/${NAME}/log:/home/log -e MODE=test -d ${DOCKER_HUB}/intelligent-system/${NAME}:${TAG_NAME}
