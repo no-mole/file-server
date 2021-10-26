@@ -27,18 +27,6 @@ import (
 
 var ConnMap map[string]*grpc.ClientConn
 
-type FileMetadata struct {
-	FileSize       int64     `json:"file_size"`
-	FileName       string    `json:"file_name"`
-	NodeServerName string    `json:"node_server_name"`
-	BucketName     string    `json:"bucket_name"`
-	AccessKey      string    `json:"access_key"`
-	Header         string    `json:"header"`
-	FileExtension  string    `json:"file_extension"`
-	ETage          string    `json:"e_tage"`
-	CreateTime     time.Time `json:"create_time"`
-}
-
 type Service struct {
 	*registry.Metadata
 	pb.UnimplementedFileServerServiceServer
@@ -216,7 +204,7 @@ func (s *Service) SaveFileMetadata(ctx context.Context, eTag string, f *os.File,
 	if err != nil {
 		return
 	}
-	metadata := &FileMetadata{
+	metadata := &pb.UploadFileInfo{
 		FileSize:       fileInfo.Size(),
 		FileName:       fileInfo.Name(),
 		BucketName:     in.Bucket,
@@ -225,10 +213,10 @@ func (s *Service) SaveFileMetadata(ctx context.Context, eTag string, f *os.File,
 		Header:         in.Header,
 		FileExtension:  path.Ext(fileInfo.Name()),
 		ETage:          eTag,
-		CreateTime:     time.Now(),
+		CreateTime:     time.Now().Format("2006-01-02 15:04:05"),
 	}
 
-	client, exist := redis.Client.GetClient(model.RedisEngineBar)
+	client, exist := redis.Client.GetClient(model.RedisEngine)
 	if !exist {
 		return
 	}
@@ -241,8 +229,8 @@ func (s *Service) SaveFileMetadata(ctx context.Context, eTag string, f *os.File,
 	return client.Set(ctx, key, string(body), 0).Err()
 }
 
-func (s *Service) GetFileLocation(ctx context.Context, fileName, bucketName string) (*FileMetadata, error) {
-	client, exist := redis.Client.GetClient(model.RedisEngineBar)
+func (s *Service) GetFileLocation(ctx context.Context, fileName, bucketName string) (*pb.UploadFileInfo, error) {
+	client, exist := redis.Client.GetClient(model.RedisEngine)
 	if !exist {
 		return nil, errors.New("not match redis")
 	}
@@ -252,7 +240,7 @@ func (s *Service) GetFileLocation(ctx context.Context, fileName, bucketName stri
 	if err != nil {
 		return nil, err
 	}
-	node := new(FileMetadata)
+	node := new(pb.UploadFileInfo)
 	err = json.Unmarshal(body, &node)
 	if err != nil {
 		return nil, err
