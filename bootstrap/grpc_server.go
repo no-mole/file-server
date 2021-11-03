@@ -14,7 +14,6 @@ import (
 func InitGrpcServer(_ context.Context) error {
 	s := app.NewGrpcServer(
 		grpc.MaxRecvMsgSize(math.MaxInt32),
-		grpc.MaxSendMsgSize(math.MaxInt32),
 		grpc_middleware.WithUnaryServerChain(
 			middleware.TracingServerInterceptor(),
 		),
