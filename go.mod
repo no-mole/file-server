@@ -7,7 +7,7 @@ require (
 	github.com/grpc-ecosystem/go-grpc-middleware v1.3.0
 	go.uber.org/automaxprocs v1.4.0
 	google.golang.org/grpc v1.41.0
-	smart.gitlab.biomind.com.cn/intelligent-system/biogo v0.0.0-20211013065145-db2d324ab238
+	smart.gitlab.biomind.com.cn/intelligent-system/biogo v0.0.0-20211108094052-d762a08fe71f
 	smart.gitlab.biomind.com.cn/intelligent-system/enum v0.0.0-20211013064508-092ac50d759c
 	smart.gitlab.biomind.com.cn/intelligent-system/protos v0.0.0-20211013070930-1acbb36648b6
 )
@@ -33,9 +33,9 @@ require (
 	github.com/modern-go/reflect2 v1.0.2 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/ugorji/go/codec v1.1.7 // indirect
-	go.etcd.io/etcd/api/v3 v3.5.0 // indirect
-	go.etcd.io/etcd/client/pkg/v3 v3.5.0 // indirect
-	go.etcd.io/etcd/client/v3 v3.5.0 // indirect
+	go.etcd.io/etcd/api/v3 v3.5.1 // indirect
+	go.etcd.io/etcd/client/pkg/v3 v3.5.1 // indirect
+	go.etcd.io/etcd/client/v3 v3.5.1 // indirect
 	go.uber.org/atomic v1.7.0 // indirect
 	go.uber.org/multierr v1.6.0 // indirect
 	go.uber.org/zap v1.19.1 // indirect
