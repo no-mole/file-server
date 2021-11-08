@@ -1,7 +1,7 @@
 package model
 
 const (
-	RedisEngineBar       = "redis"
+	RedisEngine          = "redis"
 	FileServerNodePrefix = "file_server_node"
 	RootDir              = "data"
 )

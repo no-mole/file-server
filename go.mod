@@ -1,4 +1,4 @@
-module file-server
+module smart.gitlab.biomind.com.cn/intelligent-system/file-server
 
 go 1.17
 
@@ -6,10 +6,10 @@ require (
 	github.com/gin-gonic/gin v1.7.4
 	github.com/grpc-ecosystem/go-grpc-middleware v1.3.0
 	go.uber.org/automaxprocs v1.4.0
-	google.golang.org/grpc v1.41.0
+	google.golang.org/grpc v1.42.0
 	smart.gitlab.biomind.com.cn/intelligent-system/biogo v0.0.0-20211108094052-d762a08fe71f
-	smart.gitlab.biomind.com.cn/intelligent-system/enum v0.0.0-20211013064508-092ac50d759c
-	smart.gitlab.biomind.com.cn/intelligent-system/protos v0.0.0-20211013070930-1acbb36648b6
+	smart.gitlab.biomind.com.cn/intelligent-system/enum v0.0.0-20211108035649-e25e667d0bd8
+	smart.gitlab.biomind.com.cn/intelligent-system/protos v0.0.0-20211108093708-f9e5751cfcfb
 )
 
 require (
