@@ -2,11 +2,10 @@ package bootstrap
 
 import (
 	"context"
-
-	"file-server/model"
 	"smart.gitlab.biomind.com.cn/intelligent-system/biogo/config"
 	"smart.gitlab.biomind.com.cn/intelligent-system/biogo/config/center"
 	"smart.gitlab.biomind.com.cn/intelligent-system/biogo/redis"
+	"smart.gitlab.biomind.com.cn/intelligent-system/file-server/model"
 )
 
 var redisNames = []string{

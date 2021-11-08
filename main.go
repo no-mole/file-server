@@ -2,10 +2,10 @@ package main
 
 import (
 	"context"
+	"smart.gitlab.biomind.com.cn/intelligent-system/file-server/bootstrap"
 
 	_ "go.uber.org/automaxprocs"
 
-	"file-server/bootstrap"
 
 	biogo "smart.gitlab.biomind.com.cn/intelligent-system/biogo/app"
 	"smart.gitlab.biomind.com.cn/intelligent-system/biogo/config"

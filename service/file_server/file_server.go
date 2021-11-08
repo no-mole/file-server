@@ -6,12 +6,12 @@ import (
 	"crypto/md5"
 	"encoding/json"
 	"errors"
-	"file-server/model"
 	"fmt"
 	"io"
 	"io/ioutil"
 	"os"
 	"path"
+	"smart.gitlab.biomind.com.cn/intelligent-system/file-server/model"
 	"time"
 
 	"smart.gitlab.biomind.com.cn/intelligent-system/biogo/redis"
@@ -119,6 +119,7 @@ func (s *Service) ChunkUpload(stream pb.FileServerService_ChunkUploadServer) err
 		upload.Chunk.Content = append(upload.Chunk.Content, fileChunk.Chunk.Content...)
 	}
 }
+
 func (s *Service) Download(ctx context.Context, in *pb.DownloadInfo) (resp *pb.DownloadResponse, err error) {
 	if in.Exist {
 		return s.DownloadNodeSelf(ctx, in)

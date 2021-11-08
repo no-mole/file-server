@@ -3,9 +3,9 @@ package bootstrap
 import (
 	"context"
 	"encoding/json"
-	"file-server/model"
 	"fmt"
 	"path"
+	"smart.gitlab.biomind.com.cn/intelligent-system/file-server/model"
 	"time"
 
 	"smart.gitlab.biomind.com.cn/intelligent-system/biogo/config"
@@ -60,8 +60,6 @@ func loopStoreRate() {
 			if err != nil {
 				logger.Error(ctx, "loopStoreRate.ReLoadStoreRate", err)
 			}
-		default:
-
 		}
 	}
 }
