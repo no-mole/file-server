@@ -1,18 +1,45 @@
 level: info
 queueLength: 1000
 dispatchers:
-  - type: stdout
-    formatter: json
-    tags: ["*"]
+  #  - type: stdout
+  #    formatter: json
+  #    tags: ["*"]
   - type: file
     formatter: json
-    tags: [app]
+    tags: ["*"]
     settings:
       fileName: log/app.log
       maxSize: 10
       maxBackups: 3
       maxAge: 3
-#  - type: grpc
-#    tags: [origin,master]
-#    settings:
-#      tag: origin-books
+  - type: file
+    formatter: json
+    tags: ["tracing"]
+    settings:
+      fileName: log/tracing.log
+      maxSize: 10
+      maxBackups: 3
+      maxAge: 3
+  - type: file
+    formatter: json
+    tags: [ "gin" ]
+    settings:
+      fileName: log/access.log
+      maxSize: 10
+      maxBackups: 3
+      maxAge: 3
+  - type: grpc
+    formatter: json
+    tags: ["tracing"]
+    settings:
+      tag: tracing
+  - type: grpc
+    formatter: json
+    tags: [ "app" ]
+    settings:
+      tag: app
+  - type: grpc
+    formatter: json
+    tags: [ "gin" ]
+    settings:
+      tag: gin
