@@ -1,0 +1,16 @@
+version: "3"
+services:
+  biomind_his:
+    image: smart.hub.biomind.com.cn/intelligent-system/file-server:v1.1.4
+    container_name: "file-server"
+    environment:
+      DEBUG: 1
+    volumes:
+      - "./data:/home/data"
+      - "./log:/home/log"
+      - "./prod:/home/config/prod"
+    networks:
+      - icdss
+networks:
+  icdss:
+    external: true

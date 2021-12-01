@@ -7,6 +7,7 @@ import (
 
 	"smart.gitlab.biomind.com.cn/intelligent-system/biogo/config"
 	"smart.gitlab.biomind.com.cn/intelligent-system/biogo/logger"
+	_ "smart.gitlab.biomind.com.cn/intelligent-system/logger_center/service/logger_center"
 )
 
 func InitLogger(ctx context.Context) error {

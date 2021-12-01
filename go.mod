@@ -7,9 +7,10 @@ require (
 	github.com/grpc-ecosystem/go-grpc-middleware v1.3.0
 	go.uber.org/automaxprocs v1.4.0
 	google.golang.org/grpc v1.42.0
-	smart.gitlab.biomind.com.cn/intelligent-system/biogo v0.0.0-20211108094052-d762a08fe71f
-	smart.gitlab.biomind.com.cn/intelligent-system/enum v0.0.0-20211108035649-e25e667d0bd8
-	smart.gitlab.biomind.com.cn/intelligent-system/protos v0.0.0-20211108093708-f9e5751cfcfb
+	smart.gitlab.biomind.com.cn/intelligent-system/biogo v0.8.8
+	smart.gitlab.biomind.com.cn/intelligent-system/enum v0.1.4
+	smart.gitlab.biomind.com.cn/intelligent-system/logger_center v0.1.3
+	smart.gitlab.biomind.com.cn/intelligent-system/protos v0.1.34
 )
 
 require (
@@ -26,11 +27,14 @@ require (
 	github.com/go-redis/redis/v8 v8.11.3 // indirect
 	github.com/gogo/protobuf v1.3.2 // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
+	github.com/josharian/intern v1.0.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/leodido/go-urn v1.2.1 // indirect
+	github.com/mailru/easyjson v0.7.7 // indirect
 	github.com/mattn/go-isatty v0.0.12 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.2 // indirect
+	github.com/olivere/elastic/v7 v7.0.29 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/ugorji/go/codec v1.1.7 // indirect
 	go.etcd.io/etcd/api/v3 v3.5.1 // indirect
