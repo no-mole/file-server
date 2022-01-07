@@ -1,16 +1,15 @@
-module smart.gitlab.biomind.com.cn/intelligent-system/file-server
+module smart.gitlab.biomind.com.cn/infrastructure/file-server
 
 go 1.17
 
 require (
-	github.com/gin-gonic/gin v1.7.4
 	github.com/grpc-ecosystem/go-grpc-middleware v1.3.0
 	go.uber.org/automaxprocs v1.4.0
 	google.golang.org/grpc v1.42.0
-	smart.gitlab.biomind.com.cn/intelligent-system/biogo v0.8.8
-	smart.gitlab.biomind.com.cn/intelligent-system/enum v0.1.4
-	smart.gitlab.biomind.com.cn/intelligent-system/logger_center v0.1.3
-	smart.gitlab.biomind.com.cn/intelligent-system/protos v0.1.34
+	smart.gitlab.biomind.com.cn/infrastructure/biogo v1.0.0
+	smart.gitlab.biomind.com.cn/infrastructure/logger_center v0.1.4
+	smart.gitlab.biomind.com.cn/infrastructure/middlewares v0.0.0-20220106123147-5c132ae2b4f3
+	smart.gitlab.biomind.com.cn/intelligent-system/protos v0.2.1
 )
 
 require (
@@ -20,6 +19,7 @@ require (
 	github.com/coreos/go-systemd/v22 v22.3.2 // indirect
 	github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f // indirect
 	github.com/gin-contrib/sse v0.1.0 // indirect
+	github.com/gin-gonic/gin v1.7.4 // indirect
 	github.com/go-ini/ini v1.63.0 // indirect
 	github.com/go-playground/locales v0.14.0 // indirect
 	github.com/go-playground/universal-translator v0.18.0 // indirect
@@ -27,6 +27,7 @@ require (
 	github.com/go-redis/redis/v8 v8.11.3 // indirect
 	github.com/gogo/protobuf v1.3.2 // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
+	github.com/hashicorp/golang-lru v0.5.1 // indirect
 	github.com/josharian/intern v1.0.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/leodido/go-urn v1.2.1 // indirect
@@ -45,6 +46,7 @@ require (
 	go.uber.org/zap v1.19.1 // indirect
 	golang.org/x/crypto v0.0.0-20210817164053-32db794688a5 // indirect
 	golang.org/x/net v0.0.0-20210614182718-04defd469f4e // indirect
+	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c // indirect
 	golang.org/x/sys v0.0.0-20210806184541-e5e7981a1069 // indirect
 	golang.org/x/text v0.3.7 // indirect
 	google.golang.org/genproto v0.0.0-20210602131652-f16073e35f0c // indirect
