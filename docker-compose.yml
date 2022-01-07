@@ -1,7 +1,7 @@
 version: "3"
 services:
-  biomind_his:
-    image: smart.hub.biomind.com.cn/intelligent-system/file-server:v1.1.4
+  file-server:
+    image: smart.hub.biomind.com.cn/intelligent-system/file-server:v1.1.5
     container_name: "file-server"
     environment:
       DEBUG: 1

@@ -2,13 +2,12 @@ package main
 
 import (
 	"context"
-	"smart.gitlab.biomind.com.cn/intelligent-system/file-server/bootstrap"
+	"smart.gitlab.biomind.com.cn/infrastructure/file-server/bootstrap"
 
 	_ "go.uber.org/automaxprocs"
 
-
-	biogo "smart.gitlab.biomind.com.cn/intelligent-system/biogo/app"
-	"smart.gitlab.biomind.com.cn/intelligent-system/biogo/config"
+	biogo "smart.gitlab.biomind.com.cn/infrastructure/biogo/app"
+	"smart.gitlab.biomind.com.cn/infrastructure/biogo/config"
 )
 
 func main() {

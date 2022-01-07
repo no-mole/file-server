@@ -5,13 +5,13 @@ import (
 	"encoding/json"
 	"fmt"
 	"path"
-	"smart.gitlab.biomind.com.cn/intelligent-system/file-server/model"
+	"smart.gitlab.biomind.com.cn/infrastructure/file-server/model"
 	"time"
 
-	"smart.gitlab.biomind.com.cn/intelligent-system/biogo/config"
-	fs "smart.gitlab.biomind.com.cn/intelligent-system/biogo/file_server"
-	"smart.gitlab.biomind.com.cn/intelligent-system/biogo/logger"
-	"smart.gitlab.biomind.com.cn/intelligent-system/biogo/utils"
+	"smart.gitlab.biomind.com.cn/infrastructure/biogo/config"
+	fs "smart.gitlab.biomind.com.cn/infrastructure/biogo/file_server"
+	"smart.gitlab.biomind.com.cn/infrastructure/biogo/logger"
+	"smart.gitlab.biomind.com.cn/infrastructure/biogo/utils"
 )
 
 const (
@@ -64,7 +64,7 @@ func loopStoreRate() {
 	}
 }
 
-func  ReLoadStoreRate(ctx context.Context) error {
+func ReLoadStoreRate(ctx context.Context) error {
 	size, err := fs.DirSizeB(path.Join(utils.GetCurrentAbPath(), model.RootDir))
 	if err != nil {
 		return err

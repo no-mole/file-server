@@ -5,9 +5,9 @@ import (
 	grpc_middleware "github.com/grpc-ecosystem/go-grpc-middleware"
 	"google.golang.org/grpc"
 	"math"
-	"smart.gitlab.biomind.com.cn/intelligent-system/biogo/app"
-	"smart.gitlab.biomind.com.cn/intelligent-system/biogo/middleware"
-	fs "smart.gitlab.biomind.com.cn/intelligent-system/file-server/service/file_server"
+	"smart.gitlab.biomind.com.cn/infrastructure/biogo/app"
+	fs "smart.gitlab.biomind.com.cn/infrastructure/file-server/service/file_server"
+	middleware "smart.gitlab.biomind.com.cn/infrastructure/middlewares"
 	fsPb "smart.gitlab.biomind.com.cn/intelligent-system/protos/file_server"
 )
 

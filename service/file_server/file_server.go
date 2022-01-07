@@ -11,17 +11,17 @@ import (
 	"io/ioutil"
 	"os"
 	"path"
-	"smart.gitlab.biomind.com.cn/intelligent-system/file-server/model"
+	"smart.gitlab.biomind.com.cn/infrastructure/file-server/model"
 	"time"
 
-	"smart.gitlab.biomind.com.cn/intelligent-system/biogo/redis"
+	"smart.gitlab.biomind.com.cn/infrastructure/biogo/redis"
 
 	"google.golang.org/grpc"
 
-	"smart.gitlab.biomind.com.cn/intelligent-system/biogo/config"
+	"smart.gitlab.biomind.com.cn/infrastructure/biogo/config"
 
-	"smart.gitlab.biomind.com.cn/intelligent-system/biogo/registry"
-	"smart.gitlab.biomind.com.cn/intelligent-system/biogo/utils"
+	"smart.gitlab.biomind.com.cn/infrastructure/biogo/registry"
+	"smart.gitlab.biomind.com.cn/infrastructure/biogo/utils"
 	pb "smart.gitlab.biomind.com.cn/intelligent-system/protos/file_server"
 )
 

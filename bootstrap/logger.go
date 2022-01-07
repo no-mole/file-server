@@ -5,9 +5,9 @@ import (
 	"os"
 	"path"
 
-	"smart.gitlab.biomind.com.cn/intelligent-system/biogo/config"
-	"smart.gitlab.biomind.com.cn/intelligent-system/biogo/logger"
-	_ "smart.gitlab.biomind.com.cn/intelligent-system/logger_center/service/logger_center"
+	"smart.gitlab.biomind.com.cn/infrastructure/biogo/config"
+	"smart.gitlab.biomind.com.cn/infrastructure/biogo/logger"
+	_ "smart.gitlab.biomind.com.cn/infrastructure/logger_center/service/logger_center"
 )
 
 func InitLogger(ctx context.Context) error {
