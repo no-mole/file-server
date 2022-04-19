@@ -1,4 +1,4 @@
-FROM golang:1.17.0-alpine3.13 as builder
+FROM icdss.biomind.com.cn/library/golang:1.17.0-alpine3.13 as builder
 
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 
@@ -9,12 +9,12 @@ WORKDIR /home
 COPY . /home/
 
 RUN ls -l && go env -w GO111MODULE=on  \
-    && go env -w GOPROXY="https://goproxy.cn,https://smart.hub.biomind.com.cn/goproxy,direct" \
+    && go env -w GOPROXY="https://goproxy.cn,https://icdss.biomind.com.cn/goproxy,direct" \
     && make vendor \
     && make linux_build
 
 
-FROM alpine:3.13.6 as package
+FROM icdss.biomind.com.cn/library/alpine:3.13.6 as package
 
 MAINTAINER Biomind
 
