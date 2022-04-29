@@ -21,6 +21,7 @@ func main() {
 		bootstrap.InitLogger, //初始化日志 bootstrap.InitFileServer,
 		bootstrap.InitFileServer,
 		bootstrap.InitGrpcServer, //初始化grpc server
+		bootstrap.PProf,
 	)
 
 	if err := biogo.Start(); err != nil {

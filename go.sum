@@ -771,10 +771,12 @@ honnef.co/go/tools v0.0.0-20190523083050-ea95bdfd59fc/go.mod h1:rf3lG4BRIbNafJWh
 honnef.co/go/tools v0.0.1-2019.2.3/go.mod h1:a3bituU0lyd329TUQxRnasdCoJDkEUEAqEt0JzvZhAg=
 rsc.io/binaryregexp v0.2.0/go.mod h1:qTv7/COck+e2FymRvadv62gMdZztPaShugOCi3I+8D8=
 sigs.k8s.io/yaml v1.2.0/go.mod h1:yfXDCHCao9+ENCvLSE62v9VSji2MKu5jeNfTrofGhJc=
-smart.gitlab.biomind.com.cn/infrastructure/biogo v1.0.0 h1:XQdCRzJ3eBBODGM/sMB6ZEEFcSV60+OROwIv35NlfCI=
 smart.gitlab.biomind.com.cn/infrastructure/biogo v1.0.0/go.mod h1:FoFHlPaggGG9p018HXPBmd6xf09STmj0UtW5cPG7bqI=
-smart.gitlab.biomind.com.cn/infrastructure/logger_center v0.1.4 h1:zjWOgqR+88J0DLevMa9f3LJeO6fntJPhfBrG5T6ztvo=
-smart.gitlab.biomind.com.cn/infrastructure/logger_center v0.1.4/go.mod h1:a4Ea8MutIjE/Zu4m3+liDlYcQ5bOV1UKZ/yZ5vxfYIo=
+smart.gitlab.biomind.com.cn/infrastructure/biogo v1.0.12/go.mod h1:FoFHlPaggGG9p018HXPBmd6xf09STmj0UtW5cPG7bqI=
+smart.gitlab.biomind.com.cn/infrastructure/biogo v1.0.14 h1:3AnFWJyo5ZeSFyIKqARt/fYYpci9WFnQIy4tCtDcEds=
+smart.gitlab.biomind.com.cn/infrastructure/biogo v1.0.14/go.mod h1:FoFHlPaggGG9p018HXPBmd6xf09STmj0UtW5cPG7bqI=
+smart.gitlab.biomind.com.cn/infrastructure/logger_center v0.1.6 h1:y2zl4uYt1pdbohYF8yoJMSLffZeJvCo1GIKlkQHkGuY=
+smart.gitlab.biomind.com.cn/infrastructure/logger_center v0.1.6/go.mod h1:ZST5LAi+ZTaJGN9ptdHpEUenuiSh486GK7Xl1WaZpdg=
 smart.gitlab.biomind.com.cn/infrastructure/middlewares v0.0.0-20220106123147-5c132ae2b4f3 h1:xD0yljDwBgKMATdth2TJfUsw/mnVzT3d+xR1x6VOLOE=
 smart.gitlab.biomind.com.cn/infrastructure/middlewares v0.0.0-20220106123147-5c132ae2b4f3/go.mod h1:6Z1FEYk3iRH5897Z2yywXEp3erPs9ErJvA+1ebaGAF0=
 smart.gitlab.biomind.com.cn/intelligent-system/protos v0.2.1 h1:EX7eMa3j5QJ+EmmKs8voLUya84q/QRB5smBlRK+Vm1g=
