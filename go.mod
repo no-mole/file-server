@@ -6,7 +6,7 @@ require (
 	github.com/grpc-ecosystem/go-grpc-middleware v1.3.0
 	go.uber.org/automaxprocs v1.4.0
 	google.golang.org/grpc v1.42.0
-	smart.gitlab.biomind.com.cn/infrastructure/biogo v1.0.14
+	smart.gitlab.biomind.com.cn/infrastructure/biogo v1.0.15
 	smart.gitlab.biomind.com.cn/infrastructure/logger_center v0.1.6
 	smart.gitlab.biomind.com.cn/infrastructure/middlewares v0.0.0-20220106123147-5c132ae2b4f3
 	smart.gitlab.biomind.com.cn/intelligent-system/protos v0.2.1

@@ -775,6 +775,8 @@ smart.gitlab.biomind.com.cn/infrastructure/biogo v1.0.0/go.mod h1:FoFHlPaggGG9p0
 smart.gitlab.biomind.com.cn/infrastructure/biogo v1.0.12/go.mod h1:FoFHlPaggGG9p018HXPBmd6xf09STmj0UtW5cPG7bqI=
 smart.gitlab.biomind.com.cn/infrastructure/biogo v1.0.14 h1:3AnFWJyo5ZeSFyIKqARt/fYYpci9WFnQIy4tCtDcEds=
 smart.gitlab.biomind.com.cn/infrastructure/biogo v1.0.14/go.mod h1:FoFHlPaggGG9p018HXPBmd6xf09STmj0UtW5cPG7bqI=
+smart.gitlab.biomind.com.cn/infrastructure/biogo v1.0.15 h1:lZM1i1eL3nEtObst7KCT6QSDmcOctHsWlosfbwhbiSo=
+smart.gitlab.biomind.com.cn/infrastructure/biogo v1.0.15/go.mod h1:FoFHlPaggGG9p018HXPBmd6xf09STmj0UtW5cPG7bqI=
 smart.gitlab.biomind.com.cn/infrastructure/logger_center v0.1.6 h1:y2zl4uYt1pdbohYF8yoJMSLffZeJvCo1GIKlkQHkGuY=
 smart.gitlab.biomind.com.cn/infrastructure/logger_center v0.1.6/go.mod h1:ZST5LAi+ZTaJGN9ptdHpEUenuiSh486GK7Xl1WaZpdg=
 smart.gitlab.biomind.com.cn/infrastructure/middlewares v0.0.0-20220106123147-5c132ae2b4f3 h1:xD0yljDwBgKMATdth2TJfUsw/mnVzT3d+xR1x6VOLOE=
