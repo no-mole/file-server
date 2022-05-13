@@ -13,7 +13,7 @@ test:
 	CGO_ENABLED=0 GOOS=linux go test -v ./...
 
 vendor:
-	go mod tidy && go mod vendor
+	go mod tidy -compat=1.17 && go mod vendor
 
 docker:
 	sh ./docker_build.sh $(tag)
