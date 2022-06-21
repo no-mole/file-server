@@ -7,9 +7,9 @@ import (
 	_ "net/http/pprof"
 	"runtime"
 
-	"smart.gitlab.biomind.com.cn/infrastructure/biogo/config"
-	"smart.gitlab.biomind.com.cn/infrastructure/biogo/env"
-	"smart.gitlab.biomind.com.cn/infrastructure/biogo/utils"
+	"github.com/no-mole/neptune/config"
+	"github.com/no-mole/neptune/env"
+	"github.com/no-mole/neptune/utils"
 )
 
 func PProf(_ context.Context) error {

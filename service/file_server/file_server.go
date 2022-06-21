@@ -7,22 +7,22 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"github.com/no-mole/file-server/model"
 	"io"
 	"io/ioutil"
 	"os"
 	"path"
-	"smart.gitlab.biomind.com.cn/infrastructure/file-server/model"
 	"time"
 
-	"smart.gitlab.biomind.com.cn/infrastructure/biogo/redis"
+	"github.com/no-mole/neptune/redis"
 
 	"google.golang.org/grpc"
 
-	"smart.gitlab.biomind.com.cn/infrastructure/biogo/config"
+	"github.com/no-mole/neptune/config"
 
-	"smart.gitlab.biomind.com.cn/infrastructure/biogo/registry"
-	"smart.gitlab.biomind.com.cn/infrastructure/biogo/utils"
-	pb "smart.gitlab.biomind.com.cn/intelligent-system/protos/file_server"
+	pb "github.com/no-mole/file-server/protos/file_server"
+	"github.com/no-mole/neptune/registry"
+	"github.com/no-mole/neptune/utils"
 )
 
 var ConnMap map[string]*grpc.ClientConn

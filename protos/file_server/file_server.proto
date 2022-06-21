@@ -1,0 +1,55 @@
+syntax = "proto3";  //语法声明
+
+package fs; //包
+
+option go_package = "smart.gitlab.biomind.com.cn/intelligent-system/protos/file_server";
+
+
+service FileServerService {
+    rpc SingleUpload(UploadInfo) returns (UpLoadResponse);
+    rpc ChunkUpload(stream UploadInfo) returns (UpLoadResponse);
+    rpc Download(DownloadInfo) returns (DownloadResponse);
+    rpc BigFileDownload(DownloadInfo) returns (stream DownloadResponse);
+}
+
+message Chunk {
+    bytes content = 1;
+}
+
+message UploadInfo {
+    string bucket =1;
+    string file_name =2;
+    string header =3;
+    string access_key =4;
+    Chunk chunk =5;
+}
+
+message UpLoadResponse {
+    string message =1;
+    int64 code =2;
+}
+
+message DownloadInfo {
+    int64  size = 1;
+    bool exist =2;
+    string file_name = 3;
+    string bucket =4;
+}
+
+message DownloadResponse {
+    Chunk chunk =1;
+    bool exist =2;
+    string node_name =3;
+}
+
+message UploadFileInfo {
+    int64 file_size =1;
+    string file_name =2;
+    string node_server_name =3;
+    string bucket_name =4;
+    string access_key =5;
+    string header =6;
+    string file_extension =7;
+    string e_tage =8;
+    string create_time =9;
+}

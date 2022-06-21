@@ -4,26 +4,45 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"github.com/no-mole/file-server/model"
+	"os"
 	"path"
-	"smart.gitlab.biomind.com.cn/infrastructure/file-server/model"
+	"path/filepath"
 	"time"
 
-	"smart.gitlab.biomind.com.cn/infrastructure/biogo/config"
-	fs "smart.gitlab.biomind.com.cn/infrastructure/biogo/file_server"
-	"smart.gitlab.biomind.com.cn/infrastructure/biogo/logger"
-	"smart.gitlab.biomind.com.cn/infrastructure/biogo/utils"
+	"github.com/no-mole/neptune/config"
+	"github.com/no-mole/neptune/logger"
+	"github.com/no-mole/neptune/utils"
 )
 
 const (
 	_ttl = 5
 )
 
+type ServerNode struct {
+	NodeName string `json:"node_name"`
+	Host     string `json:"host"`
+	Port     int    `json:"port"`
+	DirSize  int64  `json:"dir_size"`
+}
+
+func DirSizeB(path string) (int64, error) {
+	var size int64
+	err := filepath.Walk(path, func(_ string, info os.FileInfo, err error) error {
+		if !info.IsDir() {
+			size += info.Size()
+		}
+		return err
+	})
+	return size, err
+}
+
 func InitFileServer(ctx context.Context) error {
-	size, err := fs.DirSizeB(path.Join(utils.GetCurrentAbPath(), model.RootDir))
+	size, err := DirSizeB(path.Join(utils.GetCurrentAbPath(), model.RootDir))
 	if err != nil {
 		return err
 	}
-	node := &fs.ServerNode{
+	node := &ServerNode{
 		NodeName: config.GlobalConfig.Name,
 		Host:     config.GlobalConfig.IP,
 		Port:     config.GlobalConfig.GrpcPort,
@@ -65,11 +84,11 @@ func loopStoreRate() {
 }
 
 func ReLoadStoreRate(ctx context.Context) error {
-	size, err := fs.DirSizeB(path.Join(utils.GetCurrentAbPath(), model.RootDir))
+	size, err := DirSizeB(path.Join(utils.GetCurrentAbPath(), model.RootDir))
 	if err != nil {
 		return err
 	}
-	node := &fs.ServerNode{
+	node := &ServerNode{
 		NodeName: config.GlobalConfig.Name,
 		Host:     config.GlobalConfig.IP,
 		Port:     config.GlobalConfig.GrpcPort,

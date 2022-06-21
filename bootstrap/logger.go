@@ -5,9 +5,9 @@ import (
 	"os"
 	"path"
 
-	"smart.gitlab.biomind.com.cn/infrastructure/biogo/config"
-	"smart.gitlab.biomind.com.cn/infrastructure/biogo/logger"
-	_ "smart.gitlab.biomind.com.cn/infrastructure/logger_center/service/logger_center"
+	_ "github.com/no-mole/log-collector/service/logger_center"
+	"github.com/no-mole/neptune/config"
+	"github.com/no-mole/neptune/logger"
 )
 
 func InitLogger(ctx context.Context) error {

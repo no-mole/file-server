@@ -3,12 +3,12 @@ package bootstrap
 import (
 	"context"
 	grpc_middleware "github.com/grpc-ecosystem/go-grpc-middleware"
+	fsPb "github.com/no-mole/file-server/protos/file_server"
+	fs "github.com/no-mole/file-server/service/file_server"
+	"github.com/no-mole/neptune/app"
 	"google.golang.org/grpc"
 	"math"
-	"smart.gitlab.biomind.com.cn/infrastructure/biogo/app"
-	fs "smart.gitlab.biomind.com.cn/infrastructure/file-server/service/file_server"
 	middleware "smart.gitlab.biomind.com.cn/infrastructure/middlewares"
-	fsPb "smart.gitlab.biomind.com.cn/intelligent-system/protos/file_server"
 )
 
 func InitGrpcServer(_ context.Context) error {
